@@ -1,0 +1,173 @@
+@import '../../styles/lib';
+
+.header {
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: $max-width;
+  position: relative;
+  z-index: 2;
+
+  @media screen and (min-width: $sm) {
+    padding: 2rem 3rem;
+    align-items: flex-end;
+    margin: 0 auto;
+    gap: 4rem;
+  }
+
+  @media screen and (min-width: $lg) {
+    padding: 2rem 3rem;
+    align-items: flex-end;
+    margin: 0 auto;
+    gap: 6rem;
+  }
+}
+
+.title {
+  @include h1;
+  position: relative;
+  padding-left: 1rem;
+  color: $dark-grey;
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 3px;
+    left: 0;
+    height: 3rem;
+    width: 0.35rem;
+    background-color: $dark-grey;
+
+    @media screen and (min-width: $md) {
+      top: 6px;
+      height: 4rem;
+    }
+  }
+}
+
+.lightTitle {
+  composes: title;
+  color: $off-white;
+  &::before {
+    background-color: $off-white;
+  }
+}
+
+.nav {
+  position: fixed;
+  min-height: 100vh;
+  width: 100%;
+  padding: 8rem 0 2rem 0;
+  margin: 0 auto;
+  top: 0;
+  left: 0;
+  background: $dark-grey;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  @media screen and (min-width: $sm) {
+    position: static;
+    min-height: auto;
+    width: auto;
+    padding: 0;
+    background: transparent;
+    margin: 0;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+
+    @media screen and (min-width: $sm) {
+      flex-direction: row;
+      gap: 2rem;
+    }
+  }
+
+  li {
+    @media screen and (min-width: $sm) {
+      border-top: 4px solid $dark-grey;
+      padding: 0.5rem 1rem 0;
+      transition: border-width 0.2s;
+      &:hover {
+        border-top-width: 2px;
+      }
+    }
+  }
+
+  a {
+    @include nav;
+    color: $off-white;
+    text-align: center;
+    transition: font-weight 0.2s;
+    &:visited {
+      color: $off-white;
+    }
+    &:hover {
+      font-weight: 700;
+    }
+
+    @media screen and (min-width: $sm) {
+      color: $dark-grey;
+      &:visited {
+        color: $dark-grey;
+      }
+      &:hover {
+        font-weight: normal;
+      }
+    }
+  }
+}
+
+.lightNav {
+  composes: nav;
+  li {
+    @media screen and (min-width: $sm) {
+      border-color: $off-white;
+    }
+  }
+
+  a {
+    @media screen and (min-width: $sm) {
+      color: $off-white;
+      &:visited {
+        color: $off-white;
+      }
+    }
+  }
+}
+
+.open {
+  &:hover {
+    background: rgba($light-grey, 0.5);
+  }
+
+  @media screen and (min-width: $sm) {
+    display: none;
+  }
+}
+
+.close {
+  position: absolute;
+  top: 3rem;
+  right: 2rem;
+  &:hover {
+    background: $mid-grey;
+  }
+
+  @media screen and (min-width: $sm) {
+    display: none;
+  }
+}
+
+.open,
+.close {
+  padding: 0.3rem;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
