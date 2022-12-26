@@ -1,0 +1,49 @@
+// Breakpoints
+$sm: 860px;
+$md: 1024px;
+$lg: 1440px;
+$xl: 1920px;
+$max-width: 1520px;
+
+// Colours
+$off-white: #f2f1ef;
+$dark-grey: #1d1d1d;
+$mid-grey: #464646;
+$light-grey: #c0c0c0;
+
+// Font
+@mixin h1 {
+  font-size: 1.5rem;
+  @media screen and (min-width: $md) {
+    font-size: 2rem;
+  }
+}
+
+@mixin h2 {
+}
+
+@mixin h3 {
+}
+
+@mixin h4 {
+}
+
+@mixin body {
+  font-size: 1.1rem;
+}
+
+@mixin nav {
+  font-size: 1.5rem;
+  @media screen and (min-width: $sm) {
+    font-size: 1.25rem;
+  }
+}
+
+@mixin scroll-lock {
+  &.scroll-lock {
+    overflow: hidden;
+    @media screen and (min-width: $md) {
+      overflow: visible;
+    }
+  }
+}

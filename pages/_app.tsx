@@ -1,8 +1,9 @@
-import '../styles/globals.scss';
 import 'normalize.css';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import { EB_Garamond } from '@next/font/google';
+
+import '../styles/globals.scss';
 
 const ebGaramond = EB_Garamond({ subsets: ['latin'] });
 
