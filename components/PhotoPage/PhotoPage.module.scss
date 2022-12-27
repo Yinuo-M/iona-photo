@@ -1,0 +1,54 @@
+@import '../../styles/lib';
+
+.container {
+  padding: 0 2rem 2rem;
+
+  @media screen and (min-width: $sm) {
+    padding: 0 0 3rem;
+    width: $max-width-sm;
+    margin: 0 auto;
+  }
+
+  @media screen and (min-width: $md) {
+    width: $max-width-md;
+  }
+
+  h2 {
+    @include h2;
+    margin-top: 3rem;
+  }
+
+  p {
+    @media screen and (min-width: $sm) {
+      max-width: 35rem;
+    }
+  }
+}
+
+.photos {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+
+  @media screen and (min-width: $sm) {
+    gap: 5rem
+  }
+}
+
+.photo {
+  @media screen and (min-width: $sm) {
+    width: 80%;
+
+    &:nth-child(2n) {
+      margin-left: auto;
+    }
+  }
+}
+
+.portraitPhoto {
+  composes: photo;
+  @media screen and (min-width: $sm) {
+    width: 60%;
+  }
+}

@@ -1,0 +1,13 @@
+.container {
+  padding-bottom: 66.66%;
+  position: relative;
+
+  img {
+    object-fit: cover;
+  }
+}
+
+.portraitContainer {
+  composes: container;
+  padding-bottom: 150%;
+}
