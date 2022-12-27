@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 
 import useMobile from '../../utils/useMobile';
 import toggleScrollLock from '../../utils/toggleScrollLock';
@@ -21,31 +22,35 @@ export default function Header({ theme = 'dark' }: Props) {
   };
   const isMobile = useMobile();
 
+  const router = useRouter();
+  const getLinkClass = (pathname: string) =>
+    router.pathname === pathname ? styles.activeLink : '';
+
   return (
     <header className={`${styles.header} ${theme}`}>
       <h1 className={theme === 'dark' ? styles.title : styles.lightTitle}>
         Iona Shen <br />
         Photography
       </h1>
-      {(isOpen || !isMobile) && (
+      {(!isMobile || isOpen) && (
         <nav className={theme === 'dark' ? styles.nav : styles.lightNav}>
           <button onClick={toggleOpen} className={styles.close}>
             <Image src={closeSvg} alt="Close navigation" />
           </button>
           <ul>
-            <li>
+            <li className={getLinkClass('/')}>
               <Link href="/">Home</Link>
             </li>
-            <li>
+            <li className={getLinkClass('/about')}>
               <Link href="/about">About</Link>
             </li>
-            <li>
+            <li className={getLinkClass('/events')}>
               <Link href="/events">Events</Link>
             </li>
-            <li>
+            <li className={getLinkClass('/portraits')}>
               <Link href="/portraits">Portraits</Link>
             </li>
-            <li>
+            <li className={getLinkClass('/travel')}>
               <Link href="travel">Travel</Link>
             </li>
           </ul>

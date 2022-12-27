@@ -7,26 +7,16 @@
   padding: 0 2rem 1rem;
 
   @media screen and (min-width: $sm) {
-    min-width: 808px;
+    min-width: 760px;
     margin: 0 auto;
   }
 
   @media screen and (min-width: $md) {
-    min-width: 905px;
+    min-width: 805px;
   }
 
   a {
-    color: $dark-grey;
-    text-decoration: underline;
-    transition: all 0.2s;
-    &:hover {
-      color: black;
-      text-shadow: 0.5px 0.5px 0.5px rgba(black, 0.7);
-    }
-
-    @media screen and (min-width: $md) {
-      
-    }
+    @include link-dark;
   }
 }
 
@@ -35,10 +25,6 @@
   color: $off-white;
 
   a {
-    color: $off-white;
-    &:hover {
-      color: white;
-      text-shadow: 0.5px 0.5px 0.5px rgba(white, 0.7);
-    }
+    @include link-light;
   }
 }

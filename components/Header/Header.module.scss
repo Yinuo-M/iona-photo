@@ -5,22 +5,25 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: $max-width;
   position: relative;
   z-index: 2;
 
   @media screen and (min-width: $sm) {
-    padding: 2rem 3rem;
-    align-items: flex-end;
     margin: 0 auto;
-    gap: 4rem;
+    padding: 2rem 0rem;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: $max-width-sm;
+  }
+
+  @media screen and (min-width: $md) {
+    width: $max-width-md;
   }
 
   @media screen and (min-width: $lg) {
     padding: 2rem 3rem;
     align-items: flex-end;
     margin: 0 auto;
-    gap: 6rem;
   }
 }
 
@@ -170,4 +173,8 @@
   padding: 0.3rem;
   border-radius: 50%;
   transition: background-color 0.2s;
+}
+
+.activeLink {
+  font-weight: bold;
 }

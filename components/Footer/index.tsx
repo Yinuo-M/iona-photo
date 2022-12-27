@@ -11,7 +11,7 @@ export default function Footer({ theme = 'dark' }: Props) {
         Contact me at{' '}
         <a
           href="mailto:ionashenhanqi@gmail.com"
-          className={`${styles.link} ${theme}`}
+          className={styles.link}
         >
           ionashenhanqi@gmail.com
         </a>
