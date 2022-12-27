@@ -1,0 +1,65 @@
+@import './lib';
+
+:root,
+html {
+  font: 16px;
+}
+
+body {
+  @include scroll-lock;
+  @include body;
+  background: $off-white;
+}
+
+main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+// Resets
+button {
+  background: none;
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  line-height: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 1rem 0;
+}
+
+// Utils
+.dark {
+  color: $dark-grey;
+}

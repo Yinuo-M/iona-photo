@@ -1,0 +1,30 @@
+@import '../../styles/lib';
+
+.footer {
+  position: relative;
+  z-index: 1;
+  color: $dark-grey;
+  padding: 0 2rem 1rem;
+
+  @media screen and (min-width: $sm) {
+    min-width: 760px;
+    margin: 0 auto;
+  }
+
+  @media screen and (min-width: $md) {
+    min-width: 805px;
+  }
+
+  a {
+    @include link-dark;
+  }
+}
+
+.lightFooter {
+  composes: footer;
+  color: $off-white;
+
+  a {
+    @include link-light;
+  }
+}
