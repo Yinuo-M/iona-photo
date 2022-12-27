@@ -5,10 +5,11 @@
   z-index: 1;
   color: $dark-grey;
   padding: 0 2rem 1rem;
+  margin-top: auto;
 
   @media screen and (min-width: $sm) {
     min-width: 760px;
-    margin: 0 auto;
+    margin: auto auto 0;
   }
 
   @media screen and (min-width: $md) {
