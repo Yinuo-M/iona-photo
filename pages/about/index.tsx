@@ -2,7 +2,6 @@ import Head from 'next/head';
 import Image from 'next/image';
 
 import Header from '../../components/Header';
-import Footer from '../../components/Footer';
 import useMobile from '../../utils/useMobile';
 import styles from './About.module.scss';
 import ionaPhoto from '../../public/images/headshot.jpg';
