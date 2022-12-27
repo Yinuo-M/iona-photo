@@ -15,7 +15,6 @@
     "@types/react-dom": "18.0.10",
     "eslint": "8.30.0",
     "eslint-config-next": "13.1.1",
-    "lodash.debounce": "^4.0.8",
     "next": "13.1.1",
     "normalize.css": "^8.0.1",
     "react": "18.2.0",
