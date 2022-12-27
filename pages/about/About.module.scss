@@ -1,0 +1,49 @@
+@import '../../styles/lib';
+
+.container {
+  padding: 0 2rem 2rem;
+  position: relative;
+
+  @media screen and (min-width: $sm) {
+    padding: 0 0 3rem;
+    width: $max-width-sm;
+    margin: 0 auto;
+    gap: 4rem;
+  }
+
+  @media screen and (min-width: $md) {
+    width: $max-width-md;
+  }
+
+  h2 {
+    @include h2;
+    margin: 3rem 0 2rem;
+  }
+
+  p {
+    @media screen and (min-width: $sm) {
+      max-width: 35rem;
+    }
+  }
+
+  img {
+    position: static;
+    width: 100%;
+    height: auto;
+    @media screen and (min-width: $sm) {
+      margin-top: 1rem;
+    }
+  }
+
+  a {
+    @include link-dark;
+  }
+}
+
+.infoWrapper {
+  @media screen and (min-width: $sm) {
+    display: grid;
+    grid-template-columns: 6fr 4fr;
+    gap: 4rem;
+  }
+}
