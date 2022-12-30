@@ -44,9 +44,9 @@ export default function Header({ theme = 'dark' }: Props) {
             <li className={getLinkClass('/about')}>
               <Link href="/about">About</Link>
             </li>
-            <li className={getLinkClass('/events')}>
+            {/* <li className={getLinkClass('/events')}>
               <Link href="/events">Events</Link>
-            </li>
+            </li> */}
             <li className={getLinkClass('/portraits')}>
               <Link href="/portraits">Portraits</Link>
             </li>
