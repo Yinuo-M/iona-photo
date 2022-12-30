@@ -12,7 +12,7 @@ export default function Photo({
   src,
   alt,
   orientation = 'landscape',
-  priority = false,
+  priority = true,
 }: PhotoProps) {
   return (
     <div
