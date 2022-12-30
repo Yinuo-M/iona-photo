@@ -14,7 +14,7 @@ import {
   travel13,
   travel14,
   travel15,
-} from '../../public/images/travel';
+} from '../../public/images/travelPhotos';
 import { PhotoProps } from '../../components/Photo';
 
 const travel: PhotoProps[] = [

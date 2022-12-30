@@ -13,7 +13,7 @@ import {
   portrait12,
   portrait13,
   portrait14,
-} from '../../public/images/portraits';
+} from '../../public/images/portraitPhotos';
 import { PhotoProps } from '../../components/Photo';
 
 const portraits: PhotoProps[] = [
