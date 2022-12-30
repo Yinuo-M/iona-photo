@@ -28,6 +28,7 @@ export default function Photo({
         placeholder="blur"
         fill={true}
         priority={priority}
+        quality={50}
       />
     </div>
   );
