@@ -5,12 +5,14 @@ export type PhotoProps = {
   src: StaticImageData;
   alt: string;
   orientation?: 'landscape' | 'portrait';
+  priority?: boolean;
 };
 
 export default function Photo({
   src,
   alt,
   orientation = 'landscape',
+  priority = false,
 }: PhotoProps) {
   return (
     <div
@@ -20,7 +22,13 @@ export default function Photo({
           : styles.portraitContainer
       }
     >
-      <Image src={src} alt={alt} placeholder="blur" fill={true} />
+      <Image
+        src={src}
+        alt={alt}
+        placeholder="blur"
+        fill={true}
+        priority={priority}
+      />
     </div>
   );
 }
