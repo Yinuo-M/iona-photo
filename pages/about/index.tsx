@@ -40,9 +40,7 @@ export default function About() {
             </p>
             <p>
               You can contact me at{' '}
-              <a href="mailto:ionashenhanqi@gmail.com">
-                ionashenhanqi@gmail.com
-              </a>
+              <a href="mailto:iona_shen@icloud.com">iona_shen@icloud.com</a>
             </p>
           </div>
           {!isMobile && <Image src={ionaPhoto} alt="Iona Shen" />}
