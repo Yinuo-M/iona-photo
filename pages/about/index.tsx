@@ -43,7 +43,9 @@ export default function About() {
               <a href="mailto:iona_shen@icloud.com">iona_shen@icloud.com</a>
             </p>
           </div>
-          {!isMobile && <Image src={ionaPhoto} alt="Iona Shen" />}
+          {!isMobile && (
+            <Image src={ionaPhoto} alt="Iona Shen" priority={true} />
+          )}
         </div>
       </section>
     </>
