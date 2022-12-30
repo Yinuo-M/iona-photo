@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { useRouter } from 'next/router';
 
 import useMobile from '../../utils/useMobile';
-import toggleScrollLock from '../../utils/toggleScrollLock';
+import { toggleScrollLock } from '../../utils/toggleScrollLock';
 import closeSvg from '../../public/icons/close.svg';
 import darkHamburgerSvg from '../../public/icons/hamburger-dark.svg';
 import lightHamburgerSvg from '../../public/icons/hamburger-light.svg';
