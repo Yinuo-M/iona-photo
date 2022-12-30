@@ -10,10 +10,10 @@ export default function Footer({ theme = 'dark' }: Props) {
       <p>
         Contact me at{' '}
         <a
-          href="mailto:ionashenhanqi@gmail.com"
+          href="mailto:iona_shen@icloud.com"
           className={styles.link}
         >
-          ionashenhanqi@gmail.com
+          iona_shen@icloud.com
         </a>
       </p>
     </footer>

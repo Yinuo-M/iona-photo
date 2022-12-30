@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { useRouter } from 'next/router';
 
 import useMobile from '../../utils/useMobile';
-import toggleScrollLock from '../../utils/toggleScrollLock';
+import { toggleScrollLock } from '../../utils/toggleScrollLock';
 import closeSvg from '../../public/icons/close.svg';
 import darkHamburgerSvg from '../../public/icons/hamburger-dark.svg';
 import lightHamburgerSvg from '../../public/icons/hamburger-light.svg';
@@ -44,9 +44,9 @@ export default function Header({ theme = 'dark' }: Props) {
             <li className={getLinkClass('/about')}>
               <Link href="/about">About</Link>
             </li>
-            <li className={getLinkClass('/events')}>
+            {/* <li className={getLinkClass('/events')}>
               <Link href="/events">Events</Link>
-            </li>
+            </li> */}
             <li className={getLinkClass('/portraits')}>
               <Link href="/portraits">Portraits</Link>
             </li>

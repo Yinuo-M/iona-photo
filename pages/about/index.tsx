@@ -2,7 +2,6 @@ import Head from 'next/head';
 import Image from 'next/image';
 
 import Header from '../../components/Header';
-import Footer from '../../components/Footer';
 import useMobile from '../../utils/useMobile';
 import styles from './About.module.scss';
 import ionaPhoto from '../../public/images/headshot.jpg';
@@ -41,12 +40,12 @@ export default function About() {
             </p>
             <p>
               You can contact me at{' '}
-              <a href="mailto:ionashenhanqi@gmail.com">
-                ionashenhanqi@gmail.com
-              </a>
+              <a href="mailto:iona_shen@icloud.com">iona_shen@icloud.com</a>
             </p>
           </div>
-          {!isMobile && <Image src={ionaPhoto} alt="Iona Shen" />}
+          {!isMobile && (
+            <Image src={ionaPhoto} alt="Iona Shen" priority={true} />
+          )}
         </div>
       </section>
     </>

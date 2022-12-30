@@ -54,11 +54,13 @@ $light-grey: #c0c0c0;
 
 @mixin link-dark {
   color: $dark-grey;
-  text-decoration: underline;
-  transition: all 0.2s;
+  border-bottom: 1px solid $dark-grey;
+  padding-bottom: 2px;
+  transition: all 0.1s;
   &:hover {
     color: black;
     text-shadow: 0.3px 0.3px 0.3px rgba(black, 0.5);
+    border-bottom: 2px solid black;
   }
 }
 
