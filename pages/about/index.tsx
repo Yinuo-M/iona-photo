@@ -44,7 +44,12 @@ export default function About() {
             </p>
           </div>
           {!isMobile && (
-            <Image src={ionaPhoto} alt="Iona Shen" priority={true} />
+            <Image
+              src={ionaPhoto}
+              alt="Iona Shen"
+              priority={true}
+              placeholder="blur"
+            />
           )}
         </div>
       </section>
