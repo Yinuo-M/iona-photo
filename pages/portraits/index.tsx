@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import PhotoPage from '../../components/PhotoPage';
-import portraits from './photos';
+import portraits from '../../photoProps/portraitPhotos';
 
 export default function Events() {
   return (

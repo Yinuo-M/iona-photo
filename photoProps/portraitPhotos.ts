@@ -13,8 +13,8 @@ import {
   portrait12,
   portrait13,
   portrait14,
-} from '../../public/images/portraitPhotos';
-import { PhotoProps } from '../../components/Photo';
+} from '../public/images/portraitPhotos';
+import { PhotoProps } from '../components/Photo';
 
 const portraits: PhotoProps[] = [
   { alt: 'Portrait of friends in Nepal', src: portrait1, priority: true },

@@ -2,7 +2,7 @@ import Image, { StaticImageData } from 'next/image';
 import styles from './Photo.module.scss';
 
 export type PhotoProps = {
-  src: StaticImageData;
+  src: StaticImageData | string;
   alt: string;
   orientation?: 'landscape' | 'portrait';
   priority?: boolean;
