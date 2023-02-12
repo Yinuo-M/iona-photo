@@ -175,6 +175,16 @@
   transition: background-color 0.2s;
 }
 
-.activeLink {
+// Use li tag to increase this selector's precedence
+li.activeLink {
   font-weight: bold;
+  @media screen and (min-width: $sm) {
+    &:hover {
+      border-top-width: 4px;
+    }
+  }
+
+  a:hover {
+    font-weight: bold;
+  }
 }
